@@ -11,23 +11,23 @@ Page({
         name: 'DCY',
         students: [{
                 id: 110,
-                name: '001',
+                name: '老王',
                 age: 23
             },
             {
                 id: 111,
-                name: '002',
-                age: 23
+                name: '老李',
+                age: 24
             },
             {
                 id: 112,
-                name: '003',
-                age: 23
+                name: '老六',
+                age: 25
             },
             {
                 id: 113,
-                name: '004',
-                age: 23
+                name: '老吴',
+                age: 26
             }
         ],
         counter: 0

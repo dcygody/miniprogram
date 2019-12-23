@@ -14,8 +14,14 @@
     <!-- 1.小程序的数据绑定 {{}} -->
     <view>你好 {{name}}</view>
 
-    <!-- 列表展示 wx:for-->
-    <view wx:for="{{students}}">{{item.name}}</view>
+    <!--  列表展示 wx:for-- 数组下标名默认为index, 数组变量名默认为item> -->
+    <view wx:for="{{students}}" wx:for-index="Ids" wx:for-item="student">
+        <view wx:if="{{student.age === 24}}">{{student.name}}</view>
+        <view wx:elif="{{student.age === 25}}">{{student.name}}</view>
+        <view wx:else>{{student.age}}</view>
+        <!-- {{Ids}}:{{student.name}} -->
+
+    </view>
 
     <!-- 事件监听改变data -->
     <view>当前计数: {{counter}}</view>
