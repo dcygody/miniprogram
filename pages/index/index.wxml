@@ -15,7 +15,7 @@
     <view>你好 {{name}}</view>
 
     <!-- 列表展示 wx:for-->
-    <view wx:for = "{{students}}">{{item.name}}</view>
+    <view wx:for="{{students}}">{{item.name}}</view>
 
     <!-- 事件监听改变data -->
     <view>当前计数: {{counter}}</view>
