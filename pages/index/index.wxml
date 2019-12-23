@@ -1,13 +1,25 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <!-- <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view> -->
+
+    <!-- 1.小程序的数据绑定 {{}} -->
+    <view>你好 {{name}}</view>
+
+    <!-- 列表展示 wx:for-->
+    <view wx:for = "{{students}}">{{item.name}}</view>
+
+    <!-- 事件监听改变data -->
+    <view>当前计数: {{counter}}</view>
+    <button size="mini" bindtap="handlerBthClickPlu">+</button>
+    <button size="mini" bindtap="handlerBthClickSub">-</button>
+
 </view>

@@ -7,7 +7,15 @@ Page({
     motto: '你好 傻狗',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    name: 'DCY',
+    students: [
+        {id: 110, name: '001', age: 23},
+        { id: 111, name: '002', age: 23 },
+        { id: 112, name: '003', age: 23 },
+        { id: 113, name: '004', age: 23 }
+    ],
+    counter: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -50,5 +58,21 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  //点击按钮
+  handlerBthClickPlu() {
+      //错误做法
+      //this.data.counter += 1
+      //console.log(this.data.counter)
+
+      this.setData({
+          counter: this.data.counter + 1
+      })
+  },
+
+    handlerBthClickSub() {
+        this.setData({
+            counter: this.data.counter - 1
+        })
+    }
 })
